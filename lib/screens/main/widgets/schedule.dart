@@ -5,8 +5,13 @@ class Schedule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [Text("second page words"), Text("second page more words")],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Schedule"),
+          backgroundColor: Colors.black,
+        ),
+      ),
     );
   }
 }

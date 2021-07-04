@@ -25,7 +25,6 @@ class _PageViewDemoState extends State<PlayerController> {
       children: [
         ToDoList(),
         Schedule(),
-        // MyPage3Widget(),
       ],
     );
   }
