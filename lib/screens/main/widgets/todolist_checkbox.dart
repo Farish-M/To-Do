@@ -19,13 +19,17 @@ class CheckBox extends State<ToDoListCheckBox> {
     return CheckboxListTile(
       //Creates a textfield for the user
       title: TextField(),
+
+      //Forms the background color of the checkbox line, colors the check,
+      //and fills the remaining color of the checkbox once checked
       tileColor: Color.fromARGB(35, 0, 0, 0),
-      //Colors the check in the checkbox white
       checkColor: Colors.white,
-      //Fills the remaining color of the checkbox once checked
       activeColor: Colors.black,
-      //Determines whether the box is checked
+
+      //Whether the box is checked or not
       value: isChecked,
+
+      //Called when the value of the checkbox is changed
       onChanged: (bool? value) {
         //Changes the boolean value of the checkbox
         setState(
@@ -34,6 +38,7 @@ class CheckBox extends State<ToDoListCheckBox> {
           },
         );
       },
+      //Positions the checkbox to the left of the line
       controlAffinity: ListTileControlAffinity.leading,
     );
   }
