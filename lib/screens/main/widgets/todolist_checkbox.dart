@@ -1,4 +1,6 @@
 //The stateful widget for the checkbox for the to-do list
+//The entire function of the checkbox
+
 import 'package:flutter/material.dart';
 
 class ToDoListCheckBox extends StatefulWidget {
@@ -15,14 +17,17 @@ class CheckBox extends State<ToDoListCheckBox> {
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
-      title: Text("To-Do Item 1"),
+      //Creates a textfield for the user
+      title: TextField(),
       tileColor: Color.fromARGB(35, 0, 0, 0),
       //Colors the check in the checkbox white
       checkColor: Colors.white,
-      //Fills the remaining color of the box in getColor
+      //Fills the remaining color of the checkbox once checked
       activeColor: Colors.black,
+      //Determines whether the box is checked
       value: isChecked,
       onChanged: (bool? value) {
+        //Changes the boolean value of the checkbox
         setState(
           () {
             isChecked = value!;
