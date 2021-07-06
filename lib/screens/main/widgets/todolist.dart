@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'todolist_checkbox.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builder.dart';
 
 class ToDoList extends StatelessWidget {
   const ToDoList({Key? key}) : super(key: key);
@@ -13,8 +12,13 @@ class ToDoList extends StatelessWidget {
               title: Text("To Do List"),
               backgroundColor: Colors.black,
             ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {},
+              child: const Icon(Icons.add_circle_outline_rounded),
+              backgroundColor: Colors.green,
+            ),
             body: Container(
-              child: ToDoListCheckBox(),
+              child: TodoListBuilder(),
               alignment: Alignment.topLeft,
             )));
   }
