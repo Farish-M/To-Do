@@ -10,12 +10,14 @@ class ToDoList extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
               title: Text("To Do List"),
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.black54,
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () {},
-              child: const Icon(Icons.add_circle_outline_rounded),
-              backgroundColor: Colors.green,
+              child: const Icon(Icons.note_add_outlined),
+              backgroundColor: Colors.black,
+              //Elevation set to 0 in order to remove the background shadow
+              elevation: 0,
             ),
             body: Container(
               child: TodoListBuilder(),

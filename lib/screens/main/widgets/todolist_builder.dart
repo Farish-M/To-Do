@@ -11,15 +11,9 @@ class TodoListBuilder extends StatefulWidget {
 class _TodoListBuilderState extends State<TodoListBuilder> {
   //Create instances of TodoItems
   List<TodoItem> todoList = [
-    TodoItem(
-      false,
-    ),
-    TodoItem(
-      false,
-    ),
-    TodoItem(
-      false,
-    ),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
   ];
 
   //Create a function to take the boolean value and change it onChanged in Checkboxlisttile
@@ -53,6 +47,7 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
                 ),
               ),
             ),
+            secondary: Text("todoList[index].date"),
             checkColor: Colors.white,
             activeColor: Colors.black,
             value: todoList[index].checked,
@@ -70,6 +65,10 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
 
 class TodoItem {
   bool checked;
+  int date;
 
-  TodoItem(this.checked);
+  TodoItem(
+    this.checked,
+    this.date,
+  );
 }
