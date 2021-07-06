@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/schedule.dart';
+import 'package:productivity_todolist_schedule/screens/main/view/loginpage.dart';
+import 'package:productivity_todolist_schedule/screens/main/view/schedule.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/loginwidget.dart';
 import 'package:productivity_todolist_schedule/screens/main/widgets/todolist.dart';
 
 class UserController extends StatefulWidget {
@@ -9,7 +11,7 @@ class UserController extends StatefulWidget {
 
 class _PageViewDemoState extends State<UserController> {
   PageController _controller = PageController(
-    initialPage: 1,
+    initialPage: 0,
   );
 
   @override
@@ -23,6 +25,7 @@ class _PageViewDemoState extends State<UserController> {
     return PageView(
       controller: _controller,
       children: [
+        LoginPage(),
         ToDoList(),
         Schedule(),
       ],
