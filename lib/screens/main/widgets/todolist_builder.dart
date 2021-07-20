@@ -29,33 +29,40 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
       itemCount: todoList.length,
       itemBuilder: (BuildContext context, int index) {
         return CheckboxListTile(
-            title: TextField(
-              autocorrect: true,
-              cursorColor: Colors.black,
-              enableSuggestions: true,
-              maxLines: null,
-              textCapitalization: TextCapitalization.sentences,
-              decoration: InputDecoration(
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                border: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
-                ),
+          title: TextField(
+            //Each parameter for the CheckboxListTile TextField
+            autocorrect: true,
+            cursorColor: Colors.black,
+            enableSuggestions: true,
+            maxLines: null,
+            style: TextStyle(color: Colors.black),
+            textCapitalization: TextCapitalization.sentences,
+            decoration: InputDecoration(
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black),
+              ),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black),
+              ),
+              border: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black),
               ),
             ),
-            secondary: Text("todoList[index].date"),
-            checkColor: Colors.white,
-            activeColor: Colors.black,
-            value: todoList[index].checked,
-            onChanged: (bool? value) {
-              //Run function
-              itemChange(value!, index);
-            },
-            controlAffinity: ListTileControlAffinity.leading);
+          ),
+          secondary: Text(
+            "Insert Date",
+            style: TextStyle(color: Colors.black),
+          ),
+          selectedTileColor: Colors.black,
+          checkColor: Colors.black,
+          activeColor: Colors.black,
+          value: todoList[index].checked,
+          onChanged: (bool? value) {
+            //Run function
+            itemChange(value!, index);
+          },
+          controlAffinity: ListTileControlAffinity.leading,
+        );
       },
     );
   }

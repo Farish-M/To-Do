@@ -9,8 +9,12 @@ class ToDoList extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("To Do List"),
-              backgroundColor: Colors.black54,
+              title: Text(
+                "To Do List",
+                style: TextStyle(color: Colors.black),
+              ),
+              elevation: 0,
+              backgroundColor: Colors.white,
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () {},
@@ -19,6 +23,7 @@ class ToDoList extends StatelessWidget {
               //Elevation set to 0 in order to remove the background shadow
               elevation: 0,
             ),
+            backgroundColor: Colors.white,
             body: Container(
               child: TodoListBuilder(),
               alignment: Alignment.topLeft,
