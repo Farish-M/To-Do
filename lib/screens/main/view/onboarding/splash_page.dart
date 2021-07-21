@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/mainoverview_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/page%20scrollers/mainoverview_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class SplashPage extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Enter',
+                  'Open',
                   style: TextStyle(color: Colors.black, fontSize: 25),
                 ),
               ),

@@ -7,7 +7,9 @@ class BlankPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
@@ -43,6 +45,6 @@ class BlankPage extends StatelessWidget {
         ),
       ),
       resizeToAvoidBottomInset: true,
-    );
+    ));
   }
 }

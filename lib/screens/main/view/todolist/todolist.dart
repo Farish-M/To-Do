@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builder.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builder/newtodolist_builder.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builder/todolist_builder.dart';
 
 class ToDoList extends StatelessWidget {
   const ToDoList({Key? key}) : super(key: key);
@@ -17,7 +18,12 @@ class ToDoList extends StatelessWidget {
               backgroundColor: Colors.white,
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NewToDo(),
+                ),
+              ),
               child: const Icon(Icons.note_add_outlined),
               backgroundColor: Colors.black,
               //Elevation set to 0 in order to remove the background shadow
