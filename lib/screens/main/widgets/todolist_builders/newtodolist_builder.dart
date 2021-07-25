@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Widget for the user create new to-do items
 class NewToDo extends StatefulWidget {
   NewToDo({Key? key}) : super(key: key);
 
@@ -11,7 +12,9 @@ class _NewToDoState extends State<NewToDo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title: Text(
               "New To-Do",
@@ -23,7 +26,8 @@ class _NewToDoState extends State<NewToDo> {
             backgroundColor: Colors.white,
             elevation: 0,
           ),
-          body: Column(children: [
+          body: SingleChildScrollView(
+              child: Column(children: [
             //For the user to create a To-Do title
             Container(
                 padding: EdgeInsets.all(16),
@@ -66,6 +70,6 @@ class _NewToDoState extends State<NewToDo> {
               ),
             ),
           ])),
-    );
+        ));
   }
 }

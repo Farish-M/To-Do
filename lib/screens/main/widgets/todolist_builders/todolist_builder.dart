@@ -14,6 +14,27 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
     TodoItem(false, 1),
     TodoItem(false, 1),
     TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
+    TodoItem(false, 1),
   ];
 
   //Create a function to take the boolean value and change it onChanged in CheckboxListTile
@@ -28,7 +49,8 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
     return ListView.builder(
       itemCount: todoList.length,
       itemBuilder: (BuildContext context, int index) {
-        return CheckboxListTile(
+        return SingleChildScrollView(
+            child: CheckboxListTile(
           title: TextField(
             //Each parameter for the CheckboxListTile TextField
             autocorrect: true,
@@ -62,7 +84,7 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
             itemChange(value!, index);
           },
           controlAffinity: ListTileControlAffinity.leading,
-        );
+        ));
       },
     );
   }
