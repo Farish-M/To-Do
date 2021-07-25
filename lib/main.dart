@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:productivity_todolist_schedule/screens/main/view/onboarding/splash_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/views/splash_page.dart';
 
 void main() {
   runApp(ToDo());

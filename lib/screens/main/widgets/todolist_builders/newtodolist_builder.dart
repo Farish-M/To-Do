@@ -15,17 +15,6 @@ class _NewToDoState extends State<NewToDo> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           resizeToAvoidBottomInset: false,
-          appBar: AppBar(
-            title: Text(
-              "New To-Do",
-              style: TextStyle(
-                color: Colors.black,
-                backgroundColor: Colors.white,
-              ),
-            ),
-            backgroundColor: Colors.white,
-            elevation: 0,
-          ),
           body: SingleChildScrollView(
               child: Column(children: [
             //For the user to create a To-Do title
@@ -34,40 +23,19 @@ class _NewToDoState extends State<NewToDo> {
                 alignment: Alignment.topLeft,
                 width: 500,
                 child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Title",
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                    ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
-                    ),
-                  ),
-                  cursorColor: Colors.black,
-                )),
+                    decoration: InputDecoration(
+                  hintText: "Title",
+                ))),
+
             //Creates the option for users to add a description of a To-Do
             Container(
               padding: EdgeInsets.all(16),
               width: 500,
               child: TextField(
-                maxLines: 25,
-                decoration: InputDecoration(
-                  hintText: "Description (Optional)",
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                  border: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                ),
-                cursorColor: Colors.black,
-              ),
+                  maxLines: 25,
+                  decoration: InputDecoration(
+                    hintText: "Description (Optional)",
+                  )),
             ),
           ])),
         ));

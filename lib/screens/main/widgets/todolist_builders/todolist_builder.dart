@@ -12,29 +12,8 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
   //Instances of TodoItems
   List<TodoItem> todoList = [
     TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
-    TodoItem(false, 1),
+    TodoItem(false, 2),
+    TodoItem(false, 3),
   ];
 
   //Create a function to take the boolean value and change it onChanged in CheckboxListTile
@@ -54,30 +33,11 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
           title: TextField(
             //Each parameter for the CheckboxListTile TextField
             autocorrect: true,
-            cursorColor: Colors.black,
             enableSuggestions: true,
             maxLines: null,
-            style: TextStyle(color: Colors.black),
             textCapitalization: TextCapitalization.sentences,
-            decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black),
-              ),
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black),
-              ),
-              border: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black),
-              ),
-            ),
           ),
-          secondary: Text(
-            "Insert Date",
-            style: TextStyle(color: Colors.black),
-          ),
-          selectedTileColor: Colors.black,
-          checkColor: Colors.white,
-          activeColor: Colors.black,
+          secondary: Text((todoList[index].date).toString()),
           value: todoList[index].checked,
           onChanged: (bool? value) {
             //Run function
