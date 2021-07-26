@@ -63,25 +63,3 @@ class SplashPageWidget extends StatelessWidget {
     );
   }
 }
-
-//The animation that plays when IconButton is pressed
-//Moves the page down and into the to-do list page
-// Route _createRoute() {
-//   return PageRouteBuilder(
-//     //Navigates to the UserController widget which holds to-do list widget,
-//     //calendar widget, and blank page widget
-//     pageBuilder: (context, animation, secondaryAnimation) => UserController(),
-//     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-//       const begin = Offset(0.0, 1.0);
-//       const end = Offset.zero;
-//       const curve = Curves.ease;
-
-//       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-//       //Sliding transition of the navigation
-//       return SlideTransition(
-//         position: animation.drive(tween),
-//         child: child,
-//       );
-//     },
-//   );
-// }
