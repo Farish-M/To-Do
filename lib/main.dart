@@ -12,6 +12,7 @@ class ToDo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //Directs the user to the splash page once the app is opened
       home: SplashPage(),
     );
   }

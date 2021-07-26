@@ -22,9 +22,11 @@ class _PageViewDemoState extends State<UserController> {
   @override
   Widget build(BuildContext context) {
     return PageView(
+      //Allows the user to swipe between the pages listed
       controller: _controller,
       children: [
-        ToDoList(),
+        //List of pages that the user can swipe between
+        ToDoListPage(),
         Calendar(),
         BlankPage(),
       ],

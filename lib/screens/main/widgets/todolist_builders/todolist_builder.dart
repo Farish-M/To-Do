@@ -25,6 +25,7 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
 
   @override
   Widget build(BuildContext context) {
+    //Creates a listview of to-do list items
     return ListView.builder(
       itemCount: todoList.length,
       itemBuilder: (BuildContext context, int index) {
@@ -37,7 +38,9 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
             maxLines: null,
             textCapitalization: TextCapitalization.sentences,
           ),
-          secondary: Text((todoList[index].date).toString()),
+          //Displays the ranking of the to-do item on the right
+          //and the checkbox on the left
+          secondary: Text((todoList[index].rank).toString()),
           value: todoList[index].checked,
           onChanged: (bool? value) {
             //Run function
@@ -51,13 +54,12 @@ class _TodoListBuilderState extends State<TodoListBuilder> {
 }
 
 //Object for your todoitem
-
 class TodoItem {
   bool checked;
-  int date;
+  int rank;
 
   TodoItem(
     this.checked,
-    this.date,
+    this.rank,
   );
 }

@@ -15,6 +15,7 @@ class _CalendarState extends State<CalendarBuilder> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //Widget for the calendar
       child: TableCalendar(
         firstDay: DateTime.utc(2010, 10, 16),
         lastDay: DateTime.utc(2100, 12, 30),

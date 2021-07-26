@@ -26,7 +26,6 @@ class _NewToDoState extends State<NewToDo> {
                     decoration: InputDecoration(
                   hintText: "Title",
                 ))),
-
             //Creates the option for users to add a description of a To-Do
             Container(
               padding: EdgeInsets.all(16),

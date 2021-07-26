@@ -15,6 +15,7 @@ class Calendar extends StatelessWidget {
           ),
           elevation: 0,
         ),
+        //Displays the widget for the calendar
         body: CalendarBuilder(),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builders/splashpage_widget.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/splashpage_widget.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
