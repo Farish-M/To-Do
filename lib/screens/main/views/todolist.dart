@@ -8,9 +8,8 @@ class ToDoListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
+    return Container(
+        child: Scaffold(
             appBar: AppBar(
               //Back arrow button for the user
               leading: new IconButton(
@@ -19,7 +18,8 @@ class ToDoListPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      //Navigates user to the new to-do page
+                      //Navigates user to the new to-do page had to hard code direction
+                      //due to issues with pressing the back button and returning to the new to-do page
                       MaterialPageRoute(builder: (context) => SplashPage()));
                 },
               ),

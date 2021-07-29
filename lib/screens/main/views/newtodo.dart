@@ -36,8 +36,7 @@ class NewToDoPage extends StatelessWidget {
   }
 }
 
-//The animation that plays when IconButton is pressed
-//Moves the page down and into the to-do list page
+//Creates the route to the previous page that the user visted
 Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => NewToDoPage(),

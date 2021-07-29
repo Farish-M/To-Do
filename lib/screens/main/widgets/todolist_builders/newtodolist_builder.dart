@@ -11,32 +11,31 @@ class NewToDo extends StatefulWidget {
 class _NewToDoState extends State<NewToDo> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: SingleChildScrollView(
-              child: Column(children: [
-            //For the user to create a To-Do title
-            Container(
-                padding: EdgeInsets.all(16),
-                alignment: Alignment.topLeft,
-                width: 500,
-                child: TextField(
-                    decoration: InputDecoration(
-                  hintText: "Title",
-                ))),
-            //Creates the option for users to add a description of a To-Do
-            Container(
-              padding: EdgeInsets.all(16),
-              width: 500,
-              child: TextField(
-                  maxLines: 25,
-                  decoration: InputDecoration(
-                    hintText: "Description (Optional)",
-                  )),
-            ),
-          ])),
-        ));
+    return Container(
+        child: Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+          child: Column(children: [
+        //For the user to create a To-Do title
+        Container(
+            padding: EdgeInsets.all(16),
+            alignment: Alignment.topLeft,
+            width: 500,
+            child: TextField(
+                decoration: InputDecoration(
+              hintText: "Title",
+            ))),
+        //Creates the option for users to add a description of a To-Do
+        Container(
+          padding: EdgeInsets.all(16),
+          width: 500,
+          child: TextField(
+              maxLines: 25,
+              decoration: InputDecoration(
+                hintText: "Description (Optional)",
+              )),
+        ),
+      ])),
+    ));
   }
 }
