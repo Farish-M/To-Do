@@ -13,7 +13,7 @@ class SplashPage extends StatelessWidget {
         child: Container(
           //Parameters for the height and width of the container
           //storing the SplashPageWidget
-          height: 300,
+          height: 500,
           width: 250,
           child: SplashPageWidget(),
           margin: EdgeInsets.all(6.0),
