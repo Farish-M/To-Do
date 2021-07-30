@@ -6,9 +6,8 @@ class Calendar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Container(
+      child: Scaffold(
         appBar: AppBar(
           title: Text(
             "Calendar",
