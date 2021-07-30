@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productivity_todolist_schedule/screens/main/views/newtodo.dart';
-import 'package:productivity_todolist_schedule/screens/main/views/splash_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/views/loginpage.dart';
 import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builders/todolist_builder.dart';
 
 class ToDoListPage extends StatelessWidget {
@@ -20,7 +20,7 @@ class ToDoListPage extends StatelessWidget {
                       context,
                       //Navigates user to the new to-do page had to hard code direction
                       //due to issues with pressing the back button and returning to the new to-do page
-                      MaterialPageRoute(builder: (context) => SplashPage()));
+                      MaterialPageRoute(builder: (context) => LoginPage()));
                 },
               ),
               title: Text(

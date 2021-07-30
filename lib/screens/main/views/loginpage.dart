@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/splashpage_widget.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/loginpage_widget.dart';
 
-class SplashPage extends StatelessWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SplashPage extends StatelessWidget {
           //storing the SplashPageWidget
           height: 500,
           width: 250,
-          child: SplashPageWidget(),
+          child: LoginPageWidget(),
           margin: EdgeInsets.all(6.0),
         ),
       ),

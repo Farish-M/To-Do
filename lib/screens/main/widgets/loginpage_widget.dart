@@ -3,8 +3,8 @@ import 'package:productivity_todolist_schedule/screens/main/views/register.dart'
 import 'package:productivity_todolist_schedule/screens/main/widgets/mainoverview_page.dart';
 
 //The widget that is incharge of the; "To-Do" title; login and password forms; and login button.
-class SplashPageWidget extends StatelessWidget {
-  const SplashPageWidget({Key? key}) : super(key: key);
+class LoginPageWidget extends StatelessWidget {
+  const LoginPageWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
