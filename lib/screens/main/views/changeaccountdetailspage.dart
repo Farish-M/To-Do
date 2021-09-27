@@ -10,10 +10,13 @@ class ChangeAccountDetailsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Change Account Details"),
       ),
-      body: SizedBox(
-        width: 500,
-        child: Scaffold(
-          body: ValidationForm(),
+      body: Container(
+        alignment: Alignment.topCenter,
+        child: SizedBox(
+          width: 500,
+          child: Scaffold(
+            body: ValidationForm(),
+          ),
         ),
       ),
     );
