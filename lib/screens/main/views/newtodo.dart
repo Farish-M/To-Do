@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/mainoverview_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/views/mainoverview_page.dart';
 import 'package:productivity_todolist_schedule/screens/main/widgets/todolist_builders/newtodolist_builder.dart';
 
 class NewToDoPage extends StatelessWidget {

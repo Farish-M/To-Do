@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/mainoverview_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/views/mainoverview_page.dart';
 
 //Widget that holds the function for the user to register to the app
 class RegisterWidget extends StatelessWidget {

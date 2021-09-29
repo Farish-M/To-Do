@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productivity_todolist_schedule/screens/main/views/register.dart';
-import 'package:productivity_todolist_schedule/screens/main/widgets/mainoverview_page.dart';
+import 'package:productivity_todolist_schedule/screens/main/views/mainoverview_page.dart';
 
 //The widget that is incharge of the; "To-Do" title; login and password forms; and login button.
 class LoginPageWidget extends StatelessWidget {

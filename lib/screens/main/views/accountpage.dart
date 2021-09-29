@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:productivity_todolist_schedule/screens/main/views/changeaccountdetailspage.dart';
+import 'package:productivity_todolist_schedule/screens/main/widgets/account_details.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class AccountPage extends StatelessWidget {
                   builder: (context) => ChangeAccountDetailsPage()));
         },
       ),
+      body: Align(alignment: Alignment(-0.90, -0.75), child: AccountDetails()),
     ));
   }
 }
