@@ -32,8 +32,11 @@ class MyCustomFormState extends State<ValidationForm> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Column(
+            //NOTE: The sizedbox() widget is used to create a buffer space between each other widgets
+
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              //Refers to widget where I built the search bar
               SearchBar(),
               SizedBox(
                 height: 2.0,
@@ -42,6 +45,7 @@ class MyCustomFormState extends State<ValidationForm> {
               SizedBox(
                 height: 2.0,
               ),
+              //Plain text used to describe the category of the text fields
               Text(
                 "Personal Details",
                 style: TextStyle(
@@ -54,14 +58,17 @@ class MyCustomFormState extends State<ValidationForm> {
                 ),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
+                  //Then displays relevant text
                   if (value == null || value.isEmpty) {
                     return 'Please enter your first name';
                   }
-                  if (RegExp(
-                          r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
-                      .hasMatch(value)) {
-                    return 'Enter a valid first name';
+                  //Detects if text matches assigned regular expression
+                  //Then displays relevant text
+                  if (RegExp(r"^[0-9]*$").hasMatch(value)) {
+                    return 'Enter a valid name';
                   }
+                  //If else it will return null
                   return null;
                 },
               ),
@@ -74,14 +81,17 @@ class MyCustomFormState extends State<ValidationForm> {
                     hintText: "Family name or another name"),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
+                  //Then displays relevant text
                   if (value == null || value.isEmpty) {
                     return 'Please enter your last name';
                   }
-                  if (RegExp(
-                          r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
-                      .hasMatch(value)) {
+                  //Detects if text matches assigned regular expression
+                  //Then displays relevant text
+                  if (RegExp(r"^[0-9]*$").hasMatch(value)) {
                     return 'Enter a valid last name';
                   }
+                  //If else it will return null
                   return null;
                 },
               ),
@@ -93,15 +103,16 @@ class MyCustomFormState extends State<ValidationForm> {
                     labelText: "Date of Birth", hintText: "DD/MM/YYYY"),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
+                  //Then displays relevant text
                   if (value == null || value.isEmpty) {
                     return 'Please enter your date of birth';
                   }
                   //Regular expression for the date of birth
-                  if (RegExp(
-                          r"^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$")
-                      .hasMatch(value)) {
+                  if (!RegExp(r"[0-9]").hasMatch(value)) {
                     return 'Enter a valid date';
                   }
+                  //If else it will return null
                   return null;
                 },
               ),
@@ -113,11 +124,16 @@ class MyCustomFormState extends State<ValidationForm> {
                     labelText: "Password", hintText: "Minimum 8 characters"),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
+                  //Then displays the relevant text
                   if (value == null || value.isEmpty) {
                     return 'Please enter password';
                   }
+                  //Detects if text is less then a value length
+                  //Then displays the relevant textx
                   return value.length < 8
-                      ? 'Password must be greater than eight characters'
+                      ? 'Password not secure, must be greater than eight characters'
+                      //If else it will return null
                       : null;
                 },
               ),
@@ -129,14 +145,20 @@ class MyCustomFormState extends State<ValidationForm> {
                     labelText: "Email Address", hintText: "Email@Domain.com"),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
+                  //Then displays relevant text
                   if (value == null || value.isEmpty) {
                     return 'Please enter email address';
                   }
+                  //Regular expression for email addresses
+                  //Requests for an @ to be present in the text field
                   if (!RegExp(
                           "^[a-zA-Z0-9.!#%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,153}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,153}[a-zA-Z0-9])?)*")
                       .hasMatch(value)) {
                     return 'Enter a valid email address';
                   }
+                  //Detects if .com is included within the email address
+                  //Else it will request it
                   if (!RegExp(".com").hasMatch(value)) {
                     return 'Include .com';
                   }
@@ -152,13 +174,16 @@ class MyCustomFormState extends State<ValidationForm> {
                 ),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
                   if (value == null || value.isEmpty) {
                     return 'Please enter phone number';
                   }
+                  //Regular expression for the text box to detect if the text field includes anything that isn't numbers
                   if (!RegExp("[0-9]").hasMatch(value)) {
                     return 'Enter a valid phone number';
                   }
-                  return value.length != 2
+                  //Detects if the value length is not 10
+                  return value.length != 10
                       ? 'Enter a valid phone number'
                       : null;
                 },
@@ -178,12 +203,12 @@ class MyCustomFormState extends State<ValidationForm> {
                 ),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
                   if (value == null || value.isEmpty) {
                     return 'Please enter your country';
                   }
-                  if (RegExp(
-                          r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
-                      .hasMatch(value)) {
+                  //Detects if country textfield contains numbers
+                  if (RegExp(r"^[0-9]*$").hasMatch(value)) {
                     return 'Enter a valid country';
                   }
                   return null;
@@ -198,12 +223,12 @@ class MyCustomFormState extends State<ValidationForm> {
                 ),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
                   if (value == null || value.isEmpty) {
                     return 'Please enter your state';
                   }
-                  if (RegExp(
-                          r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
-                      .hasMatch(value)) {
+                  //Detects if textfield for state contains numbers
+                  if (RegExp(r"^[0-9]*$").hasMatch(value)) {
                     return 'Enter a valid state';
                   }
                   return null;
@@ -218,12 +243,12 @@ class MyCustomFormState extends State<ValidationForm> {
                 ),
                 // The validator receives the text that the user has entered.
                 validator: (value) {
+                  //Detects if text is null and/or empty
                   if (value == null || value.isEmpty) {
                     return 'Please enter your address';
                   }
-                  if (RegExp(
-                          r"^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
-                      .hasMatch(value)) {
+                  //De
+                  if (RegExp(r"[^A-Za-z0-9]").hasMatch(value)) {
                     return 'Enter a valid address';
                   }
                   return null;
