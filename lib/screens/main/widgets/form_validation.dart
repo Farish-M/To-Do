@@ -247,7 +247,8 @@ class MyCustomFormState extends State<ValidationForm> {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your address';
                   }
-                  //De
+                  //Detects if textfield matches the regular expression
+                  //Regular expression requests letters Aa-Zz and numbers 0-9
                   if (RegExp(r"[^A-Za-z0-9]").hasMatch(value)) {
                     return 'Enter a valid address';
                   }
@@ -266,7 +267,7 @@ class MyCustomFormState extends State<ValidationForm> {
                       // If the form is valid, send user to account page.
                       Navigator.push(
                           context,
-                          //Navigates user to the new to-do page
+                          //Navigates user to the account page
                           MaterialPageRoute(
                               builder: (context) => AccountPage()));
                     }

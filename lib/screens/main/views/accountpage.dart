@@ -23,10 +23,11 @@ class AccountPage extends StatelessWidget {
         onPressed: () {
           Navigator.push(
               context,
-              //Navigates user to the new to-do page
+              //Navigates user to the new change account details page
               MaterialPageRoute(
                   builder: (context) => ChangeAccountDetailsPage()));
         },
+        child: const Icon(Icons.settings),
       ),
       body: Align(alignment: Alignment(-0.90, -0.75), child: AccountDetails()),
     ));

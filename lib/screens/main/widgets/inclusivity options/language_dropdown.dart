@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//Drop down button that includes an assortment of languages
+//No function just prototype
 class LanguageDropDown extends StatefulWidget {
   const LanguageDropDown({Key? key}) : super(key: key);
 

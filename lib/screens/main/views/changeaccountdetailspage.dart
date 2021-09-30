@@ -11,13 +11,14 @@ class ChangeAccountDetailsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Change Account Details"),
         actions: <Widget>[
+          //Home button in the top right that allows user to navigate to the to-do page
           Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
-                      //Navigates user to the new to-do page
+                      //Navigates user to the to-do page
                       MaterialPageRoute(
                           builder: (context) => UserController()));
                 },
@@ -29,6 +30,7 @@ class ChangeAccountDetailsPage extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: SizedBox(
           width: 500,
+          //Scaffold that holds validation form
           child: Scaffold(
             body: ValidationForm(),
           ),

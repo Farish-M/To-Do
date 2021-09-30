@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//The account details page widget that contains the user information
+//Currently holding sample text as a prototype
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
 

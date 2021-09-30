@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Prototype button that will allow user to activate diction mode
 class TextToSpeech extends StatelessWidget {
   const TextToSpeech({Key? key}) : super(key: key);
 
